@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
+  
+    background-color: blueviolet;
+    color: white;
+    font-family: "poppins", sans-serif;
+    margin: 0;
+  }
