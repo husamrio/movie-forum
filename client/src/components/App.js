@@ -1,29 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
-import NavBar from "./NavBar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Home";
 import Login from "./Login";
 import Signup from "./Signup";
-import MovieList from "./MovieList";
-import Footer from "./Footer";
 
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route exact path="/">
-          <NavBar/>
-          <MovieList/>
-          <Footer />
-        </Route>
-        <Route path="/login">
-          <Login />
-        </Route>
-        <Route path="/signup">
-          <Signup />
-        </Route>
-      </Routes>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </Router>
     </div>
- 
   );
 }
 
