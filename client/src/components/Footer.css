@@ -1,0 +1,39 @@
+.footer{
+    display: flexbox;
+	background-color: #000;
+	color: white;
+    max-width: 100%;
+    padding-top: 10px;
+    margin-top: 15%;
+    
+}
+.first-sectoion{
+    margin-left: 250px;
+    
+}
+
+.f-social i{
+    padding: 5px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.footer-links{
+    display: grid;
+    grid-template-columns: 1.3fr repeat(1, 1fr) 1fr;
+    padding-left: 30px;
+    gap: 1.3rem;
+}
+li i{
+    background-color: black;
+}
+.about{
+    font-size: large;
+}
+
+
+.end{
+    background-color: black;
+    color: #fafafa;
+    text-align: center;
+}
