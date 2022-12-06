@@ -1,6 +1,6 @@
-import Review from './review component/Review';
+import Review from './components/Review';
 import './App.css';
-import Home from './review component/Home';
+import Home from './components/ReviewList';
 import React,{useState} from 'react';
 
 

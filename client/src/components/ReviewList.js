@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react';
 
-function Home({feedbacks, setFeedback}) {   
+function ReviewList({feedbacks, setFeedback}) {   
     useEffect(()=>{
        fetch("http://localhost:3000/comments")
        .then(res=>res.json())
@@ -70,4 +70,4 @@ function Home({feedbacks, setFeedback}) {
    )
 }
 
-export default Home;
+export default ReviewList;
