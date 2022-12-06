@@ -1,15 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import './App.css'
+import Search from './Search';
+
 
 
 function NavBar (){
     return (
     <div className="navbar">
-        <h1><em>MovieForum</em></h1>
+        {/* <h1><em>MovieForum</em></h1> */}
         <nav>
-            <NavLink exact to ="/">Home</NavLink>
-            <NavLink to ="/contact">Contact Us</NavLink>
-            <NavLink to ="/loginform">Login</NavLink>
+            <NavLink exact to ="/">MovieForum</NavLink>
+            <Search />
+            <button id='login-btn'>Login</button>
         </nav>
     </div>
     )
