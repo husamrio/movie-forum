@@ -8,14 +8,7 @@ function ReviewList({feedbacks, setFeedback}) {
     }, [])
    console.log('This the fetch data',feedbacks)
    function handleBlur(e){
-       console.log(e.target.innerText)
-       // //console.log(typeof(e.target.innerText))
-       // setComment(previousState=>{
-       //     previousState=e.target.innerText
-       //     return previousState;
-       // })
-       // console.log('This is new comment:',changedComment)
-       // // console.log("handle Blur")
+       console.log(e.target.innerText)     
    
           fetch(`http://localhost:3000/comments/${e.target.id}`,{
            method: "POST",

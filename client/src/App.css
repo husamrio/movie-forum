@@ -1,9 +1,16 @@
+/* #feedback {
+  background-image: linear-gradient(to right top, #000000, #1e1316, #361f22, #4f2a2d, #693737);
+} */
+
 .cont2{
-  position: relative;
-  top: 30px;
+  position: relative; 
   text-align: center;
   height: 12%;
   margin: 50px;
+}
+
+.cont2 h1 {
+  font-size: 2.5rem;
 }
 
 .fcontainer{
@@ -23,6 +30,7 @@ font-family:'Poppins', sans-serif ;
 .cont3{
   display: flex;
   justify-content: center;
+  padding-bottom: 20px;
 }
 #feedback{
   text-align: center;
@@ -44,14 +52,16 @@ font-family:'Poppins', sans-serif ;
 
 #rating{
   position: relative;
-  left: 185px;
+  left: 260px;
+  bottom: 25px;
   width: 50%;
-  padding: 10px;
 }
+
 
 #comment{
   position: relative;
   left: 150px;
+  bottom: -50px;
   width: 60%;
   padding: 10px;
 }
@@ -66,7 +76,7 @@ font-family:'Poppins', sans-serif ;
   font-family:'Poppins', sans-serif;
   font-size: 2rem;
   border: #693737 1px solid;
-  padding: 10px;
+  padding: 12px;
   width: 50%;
   color: white;
   position: relative;

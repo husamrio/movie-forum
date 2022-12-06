@@ -1,4 +1,6 @@
 import React,{useState} from 'react';
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
 
 function Review({feedbacks}){
   const[formData, setValue] =useState({
@@ -35,15 +37,17 @@ function Review({feedbacks}){
            return {...previouState, [e.target.id]:e.target.value}
       })
   }
-   //console.log(formData)
-        return(
+        return(          
           <div id='feedback'>
               <h1>Please leave your review here!!</h1>
               <h2>You can fill the form below to tell us about your experience</h2>
               <div className="cont3">
                   <form onSubmit={handleSubmit}>
-                      <label htmlFor="rating">Rating:</label>
-                      <input required type="text" name="Rating" id="rating" onChange={handleChange} value={formData.rating} placeholder='use ⭐⭐⭐⭐⭐ emojis'/><br /><br />
+                      <label htmlFor="rating">Rating:</label>                 
+                      <Stack id="rating" spacing={1} onChange={handleChange} value={formData.rating} >
+                        <Rating name="half-rating" defaultValue={2.5} precision={0.5} />                      
+                      </Stack>
+                      <br />                      
                       <label id='comm' htmlFor="comment">Comment:</label>
                       <textarea required name="Comment" id="comment" cols="30" rows="10" placeholder='write your comments here ..' onChange={handleChange} value={formData.comment}></textarea><br /><br />           
                       <input type="submit" id='submit1'/>                      
@@ -57,7 +61,7 @@ function Review({feedbacks}){
                     }
                 </div>
 
-          </div>
+          </div>          
           
       )
   }
