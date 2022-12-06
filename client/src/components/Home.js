@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from './Navbar'
-import MovieList from "./MovieList";
+import Movielist from "./Movielist";
 import Footer from "./Footer";
 
 function Home() {
   return (
     <div>
         <Navbar />
-        <MovieList />
+        <Movielist />
         <Footer />
     </div>
   )
