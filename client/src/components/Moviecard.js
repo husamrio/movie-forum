@@ -6,11 +6,11 @@ const setVoteClass = (vote) =>{
 
   if(vote >=7){
     return 'green'
-}else if (vote >=5){
+  }else if (vote >=5){
     return 'orange'
-}else {
+  }else {
     return 'red'
-}
+  }
 
 }
 
@@ -25,7 +25,7 @@ const Movie = ({ title, poster_path, vote_average, overview }) => (
     <div className="overview">
         <h3>Overview</h3>
         <p>{overview}</p>
-        <button className="button" onclick="">
+        <button className="button" onClick="">
       Reviews
     </button>
     </div>

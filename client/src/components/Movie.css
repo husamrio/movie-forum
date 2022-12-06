@@ -70,6 +70,7 @@ body  {
   transform: translateY(101%);
   overflow-y: auto;
   transition: transform 0.3s ease-in;
+  /* border: #693737 solid 1px; */
 }
 .movie:hover .overview {
   transform: translateY(0);
