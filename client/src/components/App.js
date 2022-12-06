@@ -1,6 +1,6 @@
 import '../';
 import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import NavBar from "./NavBar";
 import Login from "./Login";
 import Signup from "./Signup";
@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <Switch>
+      <Routes>
         <Route exact path="/">
           <NavBar/>
           <MovieList/>
@@ -34,7 +34,7 @@ function App() {
         <Route path="/signup">
           <Signup />
         </Route>
-      </Switch>
+      </Routes>
     </div>
   );
 }
