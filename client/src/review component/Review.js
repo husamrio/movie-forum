@@ -1,41 +1,66 @@
-import React from 'react'
-import {useState} from 'react'
-import {Button, Form, Input} from 'reactstrap';
-import Stars from './Stars';
+import React,{useState} from 'react';
 
+function Review({feedbacks}){
+  const[formData, setValue] =useState({
+      rating:'',
+      comment:'',
+      name:''
+  })
+  
+  function handleSubmit(e){
+    console.log(formData)
+      e.preventDefault();
+      fetch('http://localhost:3000/comments',{
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body:JSON.stringify(formData)
+        })
+        .then(res=>res.json())
+        .then(data=>console.log(data))
+        let form = document.querySelector('form');
+        let p = document.createElement('p');
+          document.getElementById('feedback').append(p);
+          p.style.fontFamily="'Poppins', sans-serif";
+          p.style.fontSize="40px"
+          p.innerText="Thank you for your review. Hope to see you back!!!."
+          document.querySelector('#feedback').querySelector('h2').remove();
+          form.remove();
+          document.getElementById('feedback').style.height='400px';
+  }
+  function handleChange(e){
+      setValue((previouState)=>{
+           return {...previouState, [e.target.id]:e.target.value}
+      })
+  }
+   //console.log(formData)
+        return(
+          <div id='feedback'>
+              <h1>Please leave your review here!!</h1>
+              <h2>You can fill the form below to tell us about your experience</h2>
+              <div className="cont3">
+                  <form onSubmit={handleSubmit}>
+                      <label htmlFor="rating">Rating:</label>
+                      <input required type="text" name="Rating" id="rating" onChange={handleChange} value={formData.rating} placeholder='use ⭐⭐⭐⭐⭐ emojis'/><br /><br />
+                      <label id='comm' htmlFor="comment">Comment:</label>
+                      <textarea required name="Comment" id="comment" cols="30" rows="10" placeholder='write your comments here ..' onChange={handleChange} value={formData.comment}></textarea><br /><br />           
+                      <input type="submit" id='submit1'/>                      
+                  </form>
+                </div>
+                <div>
+                    {
+                        feedbacks.map(feed =>{
+                            return( <p key={feed.id}></p>)
+                        })                        
+                    }
+                </div>
 
-function Review() {
-  const [reviews, setReviews] = useState("");
-  const [value, setValue] = useState("");
-  const [star, setStar] = useState();
-  const onChange = (e) => {
-    setReviews(e.target.value);
-  };
-  const onSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted", star);
-    setValue(reviews);
-  };
-  return (
-  <div className="form-container">
-    <h1>Enter your Reviews Here!!</h1>
-  <Stars setStar={setStar} />
-  <Form onSubmit={onSubmit}>
-    <Input
-      className="form-control"
-      type="text"
-      placeholder="Enter you review"
-      value={reviews}
-      onChange={onChange}
-    />
-    <br></br>
-    <Button type="submit" className="btn btn-primary">
-      Submit
-    </Button>
-    <div>{value}</div>
-  </Form>
-</div>
-);
-}
+          </div>
+          
+      )
+  }
+
 
 export default Review

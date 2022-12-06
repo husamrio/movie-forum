@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "rating": "ggg",
+      "comment": "ggg",
+      "name": "",
+      "id": 1
+    },
+    {
+      "rating": "alright alright alright",
+      "comment": "it was a beautiful film",
+      "name": "",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
