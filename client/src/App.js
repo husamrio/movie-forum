@@ -1,32 +1,15 @@
-import Movie from "./components/Movie";
-import "./components/Movie.css";
-import { useEffect, useState } from "react";
+import Movielist from'./components/Movielist';
 
-const API_URL =
-  "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1";
+function App(){
+  return(
 
-// const SEARCH_API =
-//   'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="';
+<div>
+  <Movielist />
+</div>
 
-function App() {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setMovies(data.results);
-      });
-  }, []);
-
-  return (
-    <div className="main">
-      {movies.length > 0 && movies.map((movie) => (
-        <Movie key={movie.id} {...movie}/>
-      ))}
-    </div>
   );
+
 }
 
 export default App;
+

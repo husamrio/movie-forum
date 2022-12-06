@@ -13,6 +13,9 @@ const Movie = ({ title, poster_path, vote_average, overview }) => (
     <div className="overview">
         <h3>Overview</h3>
         <p>{overview}</p>
+        <button className="button" onclick="">
+      Reviews
+    </button>
     </div>
   </div>
 );
