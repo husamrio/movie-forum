@@ -24,8 +24,8 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <NavBar user={user} setUser={setUser} />
-          <MovieList user={user} setUser={setUser} />
+          <NavBar/>
+          <MovieList/>
           <Footer />
         </Route>
         <Route path="/login">
