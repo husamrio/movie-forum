@@ -1,11 +1,11 @@
-// import './App.css';
+import '../';
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
-import MovieList from "./components/MovieList";
-import Footer from "./components/Footer";
+import NavBar from "./NavBar";
+import Login from "./Login";
+import Signup from "./Signup";
+import MovieList from "./MovieList";
+import Footer from "./Footer";
 
 function App() {
   const [user, setUser] = useState(null);
