@@ -3,8 +3,7 @@ import React from "react";
 const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 
 const setVoteClass = (vote) =>{
-
-  if(vote >=7){
+  if(vote >=8){
     return 'green'
   }else if (vote >=5){
     return 'orange'
