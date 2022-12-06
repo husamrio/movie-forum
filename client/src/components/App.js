@@ -21,8 +21,11 @@ function App() {
     //     </a>
     //   </header>
     // </div>
-    <Navbar/>,
-    <Footer/>
+    <div>
+    <Navbar />
+    <Footer />
+    </div>
+ 
   );
 }
 
