@@ -46,12 +46,12 @@ export default function Footer() {
           <h3>Subscribe</h3>
           <p>Get out Newsletters</p>
           <input type="email" placeholder="Enter your email" required />
-          <button id="btn" type="submit" name="" value="Subscribe">
+          <button id="s-btn" type="submit" name="" value="Subscribe">
             Subscribe
           </button>
         </div>
       </div>
-      <div class="end">
+      <div className="end">
         <p>
           © 2022 movieforum.com or its affiliates | All rights reserved,terms
           and conditions applied

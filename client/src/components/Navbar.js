@@ -13,8 +13,8 @@ function NavBar (){
             <img id= 'logo' src="https://i.ibb.co/XsSZ0x1/image-1-1.jpg" alt=""/>
             <NavLink exact to ="/">MovieForum</NavLink>
             <Search />
-            <button id='login-btn'>Login</button>
-            <button id='signup-btn'>SignUp</button>
+            <button className= 'btn' id='login-btn'>Login</button>
+            <button className= 'btn' id='signup-btn'>SignUp</button>
         </nav>
     </div>
     )

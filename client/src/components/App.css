@@ -2,6 +2,9 @@
   --primary-color: #ffffff;
   --secondary-color: #693737;
 }
+body{
+  font-family: 'Montserrat', sans-serif;
+}
 /* NAVBAR */
 .navbar {
   background-color: var(--secondary-color);
@@ -47,20 +50,21 @@ nav a {
   border-radius: 30px;
 }
 #login-btn {
-  font-size: large;
-  font-weight: 700;
-  text-align: center;
-  width: 80px;
-  height: 40px;
+
   margin-left: 200px;
   margin-top: 15px;
 }
 #signup-btn {
+
+  margin-left: 50px;
+  margin-top: 15px;
+}
+.btn{
   font-size: large;
   font-weight: 700;
   text-align: center;
-  width: 80px;
-  height: 40px;
-  margin-left: 50px;
-  margin-top: 15px;
+  width: 100px;
+  height: 70px;
+  background-color: #000;
+  color: #fafafa;
 }
