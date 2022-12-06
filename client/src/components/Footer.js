@@ -26,7 +26,7 @@ export default function Footer() {
       </div>
       <div className="footer-links">
         <div className="about">
-          <h3>About MpvieForum</h3>
+          <h3>About MovieForum</h3>
           <ul>
             <li>About Us</li>
             <li>Latest Shows</li>
