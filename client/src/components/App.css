@@ -1,43 +1,37 @@
+:root{
+  --primary-color: #ffffff;
+  --secondary-color: #693737;
+}
 /* NAVBAR */
 .navbar {
-  background-color: #ffa500;
+  background-color: var(--secondary-color);
   height: 100px;
   padding: 20px;
   display: flex;
   align-items: center;
-  align-content: center;
+  /* align-content: center;  */
   gap: 1%;
   justify-content: space-around;
 }
-/* .navbar .h1 {
-  margin-left: 10%;
-  text-decoration: none;
-  font-size: x-large;
-  font-weight: 800;
-} */
-.navbar {
-  background-color: #ffa500;
-  height: 60px;
-  padding: 20px;
-  display: flex;
-  /* align-items: center; */
-  /* align-content: center; */
-  /* gap: 1%; */
-  justify-content: space-between;
-}
 nav{
-  padding: 30px;
-  margin-left: 10%;
   display: flex;
-
+}
+#logo{
+  margin-right: 10px;
+  object-fit: scale-down;
+  height: 100px;
+  border-radius:20px;
+  position: relative;
+  right: 80px;
 }
 nav a {
-  /* margin-left: 40%; */
   text-decoration: none;
   font-size: 50px;
   font-weight: 800;
   color: #fafafa;
   font-family: 'Poppins', sans-serif;
+  position: relative;
+  right: 80px;
 }
 .searchbar {
   border: none;
@@ -50,6 +44,7 @@ nav a {
   padding: 15px;
   width: 500px;
   margin-top: 15px;
+  border-radius: 30px;
 }
 #login-btn {
   font-size: large;
@@ -57,6 +52,15 @@ nav a {
   text-align: center;
   width: 80px;
   height: 40px;
-  margin-left: 100px;
+  margin-left: 200px;
+  margin-top: 15px;
+}
+#signup-btn {
+  font-size: large;
+  font-weight: 700;
+  text-align: center;
+  width: 80px;
+  height: 40px;
+  margin-left: 50px;
   margin-top: 15px;
 }
