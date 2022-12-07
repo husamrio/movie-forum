@@ -1,11 +1,10 @@
 :root{
     --primary-color: #ffffff;
     --secondary-color: #693737;
-  
   }
 
 * {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 body  {

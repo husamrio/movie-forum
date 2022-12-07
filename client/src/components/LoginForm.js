@@ -49,7 +49,7 @@ function LoginForm({ setUser }) {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button id="b3"variant="fill" color="primary" type="submit">
-          {isLoading ? "Loading..." : "Login"}
+          Login
         </button>
       <div>
         {/* {errors.map((err) => (
