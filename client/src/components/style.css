@@ -2,34 +2,66 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
-#header {
-  margin-top: 0;
-  position: relative;
-  top: 250px;
-  left: 287px;
+.cont{
+  display: flex;
+  height: 100vh;
 }
-#h3{
-  position: relative;
+.cont1{
+ width: 50%;
+  border: solid 1px black;
+}
+.cont2{
+  width: 50%;
+  border: solid 1px #961414;
+  background-color: #f7f7f7;
+  background: url("../cinema-seats.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+ .cont3{
+    /* border:1px solid black; */
+    width: 50%;
+    position: relative;
+    top: 100px;
+    right: 500px;
+    margin: auto;
+    padding: 50px;
+    border-radius: 50px;
+    background-color: #FFFDD0;
+    opacity:0.9;
+ }
+ .cont3:hover{
+    opacity: 1;
+ }
+#header {
+  text-align: center;
+
+  /* position: relative;
+  top: 250px;
+  left: 287px; */
+}
+#h2{
+  text-align: center;
+
+  /* position: relative;
   top: 260px;
-  left: 287px;
+  left: 287px; */
 } 
 
 #img {
-  float: left;
-  width: 70%;
-  height: 99vh;
-}
-.cont {
-    width:max-content;
+  height:100%;
+  width:100%;
 }
 form {
-  position: relative;
+  /* position: relative;
   top: 280px;
-  left: 287px;
+  left: 287px; */
+  border: 1px solid black;
+  padding:0 50px 50px 50px;
 }
 .p{
-  position: relative;
-  top: 300px;
+  /* position: relative;
+  top: 300px; */
   left: 287px;
 }
 
@@ -49,29 +81,47 @@ form {
 #b1{
     padding: 5px;
     width: 100px;
-    background-color: #ababab;
-    border:#ababab solid 1px;
+    background-color: #b44327;
+    border:#b44327 solid 1px;
 }
 #b2{
    padding: 5px;
    width: 100px;
-   background-color: #ababab;
-   border:#ababab solid 1px;
+   background-color: #b44327;
+   border:#b44327 solid 1px;
 }
 
 #b3{
+    display: block;
     padding: 10px;
     width: 300px;    
-    background-color: #ababab;
-    border:#ababab solid 1px;
+    background-color: #b44327;
+    border:#b44327 solid 1px;
+    position: relative;
+    /* left: 30px; */
 }
 #b4{
     padding: 10px;
     width: 300px;    
-    background-color: #ababab;
-    border:#ababab solid 1px;
+    background-color: #b44327;
+    border:#b44327 solid 1px;
 }
-
+#b1:hover{
+  background-color: #961414;
+  color: white;
+}
+#b2:hover{
+  background-color: #961414;
+  color: white;
+}
+#b3:hover{
+  background-color: #961414;
+  color: white;
+}
+#b4:hover{
+  background-color:#961414;
+  color: white;
+}
 #password_confirmation{
     margin: 15px 0;
     padding: 10px;
