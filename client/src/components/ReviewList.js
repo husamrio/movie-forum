@@ -1,4 +1,6 @@
 import React,{useEffect} from 'react';
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
 
 function ReviewList({feedbacks, setFeedback}) {   
     useEffect(()=>{
@@ -25,7 +27,9 @@ function ReviewList({feedbacks, setFeedback}) {
     const cards=feedbacks.map(feedback=>{
        return (
        <div key={feedback.id} className="feedbackCard" >
-           <h1>{feedback.rating}</h1>
+           <Stack>
+              <Rating value={feedback.rating} readOnly/>                      
+           </Stack>
            <p contentEditable='true' onBlur={handleBlur} id={feedback.id}>{feedback.comment}</p>           
            <button className='delete' onClick={handleDelete}  id={feedback.id}>Delete</button>
        </div>)

@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 
 function Review({feedbacks}){
   const[formData, setValue] =useState({
-      rating:'',
+      rating: '',
       comment:'',
       name:''
   })
@@ -44,9 +44,9 @@ function Review({feedbacks}){
               <h2>You can fill the form below to tell us about your experience</h2>
               <div className="cont3">
                   <form onSubmit={handleSubmit}>
-                      <label className='rating' htmlFor="rating">Rating:</label>                 
-                      <Stack id="rating" spacing={1} onChange={handleChange} value={formData.rating} >
-                        <Rating name="half-rating" defaultValue={2.5} precision={0.5} />                      
+                      <label className='rating' htmlFor="rating">Rating:</label>                     
+                      <Stack id="rating" spacing={1}>
+                        <Rating name="half-rating" precision={0.5} onChange={handleChange} value={formData.rating}/>                      
                       </Stack>
                       <br />                      
                       <label id='comm' htmlFor="comment">Comment:</label>
