@@ -28,19 +28,17 @@ function LoginForm({ onLogin }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <label className="label" htmlFor="username">Username:</label>
+        <h2 id="h2">Hi, Welcome Back!</h2>
+        <label className="label" htmlFor="username">Enter username:</label>
         <input
           type="text"
           id="username"
           autoComplete="off"
-          placeholder="Enter username"
+          placeholder="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-      </div>
-      <div>
-        <label className="label" htmlFor="password">Password:</label>
+        <label className="label" htmlFor="password">Enter password:</label>
         <input
           type="password"
           id="password"
@@ -49,12 +47,9 @@ function LoginForm({ onLogin }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-      </div>
-      <div>
         <button id="b3"variant="fill" color="primary" type="submit">
           {isLoading ? "Loading..." : "Login"}
         </button>
-      </div>
       <div>
         {/* {errors.map((err) => (
           <Error key={err}>{err}</Error>
