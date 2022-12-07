@@ -8,6 +8,8 @@ function SignUpForm({ setShowLogin }) {
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [errors, setErrors] = useState([]);
 
+  console.log(errors)
+  
   function handleSubmit(e) {
     e.preventDefault();
     setErrors([]);
@@ -17,25 +19,24 @@ function SignUpForm({ setShowLogin }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        username: username,
-        password: password,
-        password_confirmation: passwordConfirmation,
+        username,
+        password,
+        password_confirmation: passwordConfirmation
       }),
     }).then((r) => {
       if (r.ok) {
         setShowLogin(true)
       } else {
-        r.json().then((err) => console.log(err.errors));
+        r.json().then((err) => setErrors(err.errors));
       }
     });
   }
 
   return (
     <form onSubmit={handleSubmit}>
+      <h2 id="h2">Enroll for free!</h2>
       <div>
-        <label className="label2" htmlFor="username">
-          Username:
-        </label>
+        <label className="label2" htmlFor="username">Enter username:</label>
         <input
           type="text"
           id="username"
@@ -46,12 +47,10 @@ function SignUpForm({ setShowLogin }) {
         />
       </div>
       <div>
-        <label className="label2" htmlFor="password">
-          Password:
-        </label>
+        <label className="label2" htmlFor="password">Enter Password:</label>
         <input
           type="password"
-          placeholder="Enter password"
+          placeholder="password"
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -59,9 +58,7 @@ function SignUpForm({ setShowLogin }) {
         />
       </div>
       <div>
-        <label className="label2" htmlFor="password">
-          Password Confirmation:
-        </label>
+        <label className="label2" htmlFor="password">Confirm password:</label>
         <input
           type="password"
           placeholder="confirm password"
