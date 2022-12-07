@@ -10,7 +10,7 @@
 
 body  {
   background-color: var(--primary-color);
-  color: white;
+  /* color: white; */
   font-family: "poppins", sans-serif;
   margin: 0;
 }

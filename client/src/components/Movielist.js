@@ -2,27 +2,30 @@ import Moviecard from "./Moviecard";
 import "./Movie.css";
 import { useEffect, useState } from "react";
 
-const API_URL =
-  "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1";
+// FETCH FROM EXTERNAL API
+// const API_URL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1";
 
-// const SEARCH_API =
-//   'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="';
+
+// const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="';
 
 function Movielist() {
   const [movies, setMovies] = useState([]);
-  // useEffect(() => {
-  //   fetch("/movies")
-  //     .then(res => res.json())
-  //     .then(setMovies)
-  // }, []);
 
+  //FETCH FROM LOCAL SERVER
   useEffect(() => {
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((data) => {
-        setMovies(data.results);
-      });
+    fetch("/movies")
+      .then(res => res.json())
+      .then(setMovies)
   }, []);
+
+  // FETCH FROM EXTERNAL API
+  // useEffect(() => {
+  //   fetch(API_URL)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setMovies(data.results);
+  //     });
+  // }, []);
 
   return (
     <div className="main">

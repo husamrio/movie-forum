@@ -3,24 +3,15 @@ import Navbar from './Navbar'
 import Movielist from "./Movielist";
 import Footer from "./Footer";
 
-function Home() {
-  // const [user, setUser] = useState(null)
-
-  // useEffect(() => {
-  //   fetch("/me").then((r) => {
-  //     if (r.ok) {
-  //       r.json().then((user) => setUser(user));
-  //     }
-  //   });
-  // }, []);
+function Home({user, setUser}) {
 
   return (
     <div>
-        <Navbar />
-        <Movielist />
-        <Footer />
+      <Navbar user={user} setUser={setUser} />
+      <Movielist user={user} setUser={setUser} />
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default Home

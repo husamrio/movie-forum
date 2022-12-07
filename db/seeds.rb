@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Movie.destroy_all
 puts 'starts'
 movies = [
     {   title: "Black Adam",
@@ -92,10 +93,10 @@ movies = [
 
 movies.map {|movie| Movie.create!(movie)}
 
-# User.create(username: "Mikey", password_digest: "123qwerty")
-# User.create(username: "Riggy G", password_digest: "wasdijkl")
-# User.create(username: "Flynn", password_digest: "wukong97")
-# User.create(username: "Lynne", password_digest: "sungjinwoo")
+# User.create(username: "Mikey", password: "123qwerty")
+# User.create(username: "RiggyG", password: "wasdijkl")
+# User.create(username: "Flynn", password: "wukong97")
+# User.create(username: "Lynne", password: "sungjinwoo")
 
 # Review.create(comment: "Very interesting", star_rating: 7, user_id:1 , movie_id: 4)
 # Review.create(comment: "Best Movie Ever!!!", star_rating: 10, user_id:2 , movie_id: 2)
