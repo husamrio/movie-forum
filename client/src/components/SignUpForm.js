@@ -35,8 +35,9 @@ function SignUpForm({ onLogin }) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h2 id="h2">Enroll for free!</h2>
       <div>
-        <label className="label2" htmlFor="username">Username:</label>
+        <label className="label2" htmlFor="username">Enter username:</label>
         <input
           type="text"
           id="username"
@@ -47,10 +48,10 @@ function SignUpForm({ onLogin }) {
         />
       </div>
       <div>
-        <label className="label2" htmlFor="password">Password:</label>
+        <label className="label2" htmlFor="password">Enter Password:</label>
         <input
           type="password"
-          placeholder="Enter password"
+          placeholder="password"
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -58,7 +59,7 @@ function SignUpForm({ onLogin }) {
         />
       </div>
       <div>
-        <label className="label2" htmlFor="password">Password Confirmation:</label>
+        <label className="label2" htmlFor="password">Confirm password:</label>
         <input
           type="password"
           placeholder="confirm password"
