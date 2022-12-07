@@ -27,6 +27,7 @@ function Review({feedbacks}){
           document.getElementById('feedback').append(p);
           p.style.fontFamily="'Poppins', sans-serif";
           p.style.fontSize="40px"
+          p.style.color = "cornsilk"
           p.innerText="Thank you for your review. Hope to see you back!!!."
           document.querySelector('#feedback').querySelector('h2').remove();
           form.remove();
@@ -43,7 +44,7 @@ function Review({feedbacks}){
               <h2>You can fill the form below to tell us about your experience</h2>
               <div className="cont3">
                   <form onSubmit={handleSubmit}>
-                      <label htmlFor="rating">Rating:</label>                 
+                      <label className='rating' htmlFor="rating">Rating:</label>                 
                       <Stack id="rating" spacing={1} onChange={handleChange} value={formData.rating} >
                         <Rating name="half-rating" defaultValue={2.5} precision={0.5} />                      
                       </Stack>
