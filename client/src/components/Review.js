@@ -51,7 +51,10 @@ function Review({feedbacks}){
                       <br />                      
                       <label id='comm' htmlFor="comment">Comment:</label>
                       <textarea required name="Comment" id="comment" cols="30" rows="10" placeholder='write your comments here ..' onChange={handleChange} value={formData.comment}></textarea><br /><br />           
-                      <input type="submit" id='submit1'/>                      
+                      <input type="submit" id='submit1'/>   
+                      <a href="/home">
+                        <button id='homebtn'>HomePage</button>
+                      </a>                  
                   </form>
                 </div>
                 <div>
