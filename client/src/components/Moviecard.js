@@ -1,4 +1,6 @@
 import React from "react";
+import Button from './Button'
+
 
 const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 
@@ -25,9 +27,7 @@ const Movie = ({ title, poster_path, vote_average, overview }) => (
     <div className="overview">
         <h3>Overview</h3>
         <p>{overview}</p>
-        <button className="button" onclick="">
-      Reviews
-    </button>
+        <div><Button /></div>
     </div>
   </div>
 );
