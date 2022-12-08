@@ -4,7 +4,6 @@ import Movielist from "./Movielist";
 import Footer from "./Footer";
 
 function Home({user, setUser}) {
-
   return (
     <div>
       <Navbar user={user} setUser={setUser} />

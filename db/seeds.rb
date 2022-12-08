@@ -1,12 +1,15 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+User.destroy_all
 Movie.destroy_all
-puts 'starts'
+Review.destroy_all
+
+puts "start seeding"
+
+User.create(username: "Joe", password:"joe1")
+User.create(username: "Barbs", password:"barbs2")
+User.create(username: "Ivan", password:"ivan4")
+User.create(username: "Aziz", password:"aziz3")
+User.create(username: "J.D", password:"jd5")
+
 movies = [
     {   title: "Black Adam",
         overview: "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
@@ -91,15 +94,46 @@ movies = [
     }
 ]
 
-movies.map {|movie| Movie.create!(movie)}
+movies.map {|movie| Movie.create(movie)}
 
-# User.create(username: "Mikey", password: "123qwerty")
-# User.create(username: "RiggyG", password: "wasdijkl")
-# User.create(username: "Flynn", password: "wukong97")
-# User.create(username: "Lynne", password: "sungjinwoo")
+Review.create(user_id:1,movie_id:3, comment:"okay movie",star_rating: 5)
+Review.create(user_id:2,movie_id:6, comment:"awesome💃🏿",star_rating:7.7 )
+Review.create(user_id:3,movie_id:9, comment:"okay-ish",star_rating: 5.6)
+Review.create(user_id:4,movie_id:5, comment:"Best movie ever❤️‍🔥",star_rating: 8)
+Review.create(user_id:5,movie_id:2, comment:"quite dissapointing😭",star_rating: 4.6)
 
-# Review.create(comment: "Very interesting", star_rating: 7, user_id:1 , movie_id: 4)
-# Review.create(comment: "Best Movie Ever!!!", star_rating: 10, user_id:2 , movie_id: 2)
-# Review.create(comment: "Black Adam Forever!!!", star_rating: 8, user_id:3 , movie_id: 1)
-# Review.create(comment: "Don't waste your time watching", star_rating: 3, user_id:4 , movie_id: 3)
-puts 'ends'
+
+puts "data seeded"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

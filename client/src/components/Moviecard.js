@@ -1,34 +1,54 @@
 import React from "react";
+import { useState } from "react";
 
-const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
+function Moviecard(props) {
+  const [clicked, setClicked] = useState("false");
 
-const setVoteClass = (vote) =>{
-  if(vote >=8){
-    return 'green'
-  }else if (vote >=5){
-    return 'orange'
-  }else {
-    return 'red'
+  const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
+
+  const setVoteClass = (vote) => {
+    if (vote >= 7) {
+      return "green";
+    } else if (vote >= 5) {
+      return "orange";
+    } else {
+      return "red";
+    }
+  };
+
+  function handleClick(e) {
+    if (clicked === "false") {
+      setClicked("true");
+    } else {
+      setClicked("false");
+    }
   }
+  // let reviews = props.reviews.map((r) => (<p key={r.id}>{r.comment}</p>))
 
-}
 
-const Movie = ({ title, poster_path, vote_average, overview }) => (
-  <div className="movie">
-    <img src={IMG_PATH + poster_path} alt={title} />
-    <div className="movie-info">
-      <h3>{title}</h3>
-      <span className={`movie-info ${setVoteClass(vote_average)}`}>{vote_average}</span>
-    </div>
+  let poster_path = props.poster_path;
 
-    <div className="overview">
+  return (
+    <div className="movie">
+      <img src={IMG_PATH + poster_path} alt={props.title} />
+      <div className="movie-info">
+        <h3>{props.title}</h3>
+        <span className={`movie-info ${setVoteClass(props.vote_average)}`}>
+          {props.vote_average}
+        </span>
+      </div>
+
+      <div className="overview">
         <h3>Overview</h3>
-        <p>{overview}</p>
-        <button className="button" onClick="">
-      Reviews
-    </button>
+        <>
+          <p>{props.overview}</p>
+          {/* {clicked == "true" ? reviews : null} */}
+        </>
+        <button className="button" onClick={handleClick}>
+          Reviews
+        </button>
+      </div>
     </div>
-  </div>
-);
-
-export default Movie;
+  );
+}
+export default Moviecard

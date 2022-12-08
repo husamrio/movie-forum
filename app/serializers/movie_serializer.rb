@@ -1,3 +1,3 @@
 class MovieSerializer < ActiveModel::Serializer
-  attributes :id, :title, :overview, :poster_path, :vote_average
+  attributes :id, :title, :poster_path, :overview, :vote_average
 end

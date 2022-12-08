@@ -28,7 +28,6 @@ function NavBar ({user, setUser}){
           </NavLink>
           <Search />
           {!user ? <button id="login-btn" onClick={() => navigate("/login")}>Login</button> : <button id="login-btn" onClick={()=>handleLogout()}>Logout</button>}
-          {/* <button id='signup-btn'>SignUp</button> */}
         </nav>
       </div>
     );
