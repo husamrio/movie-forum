@@ -1,7 +1,3 @@
-#review {
-  background-image: linear-gradient(to right top, #1f191b, #2c1a1f, #3a1b21, #471b22, #541b20, #5a1e21, #602022, #662322, #672827, #682d2d, #693232, #693737);
-}
-
 .cont2{
   position: relative; 
   text-align: center;
@@ -9,8 +5,8 @@
 }
 
 .cont2 h1 {
-  font-size: 2.5rem;
-  color: cornsilk;
+  font-size: 2.5rem; 
+  color: #000000; 
 }
 
 .fcontainer{
@@ -21,7 +17,7 @@ margin-top: 50px;
 
 .fcontainer h1{
 font-family:'Poppins', sans-serif ;
-color: cornsilk;
+color: #000000;
 }
 
 .feedbackCard img{
@@ -41,11 +37,11 @@ color: cornsilk;
 
 #feedback h1{
   font-size: 2.8rem;
-  color: cornsilk;
+  color: black;
 }
 
 #feedback h2{  
-  color: cornsilk;
+  color: black;
 }
 
 .cont3 form{
@@ -67,7 +63,7 @@ color: cornsilk;
 }
 
 .rating {
-  color:cornsilk;
+  color:black;
 }
 
 #comment{
@@ -82,11 +78,11 @@ color: cornsilk;
 #comm{
   position: relative;
   bottom: 100px;
-  color: cornsilk;
+  color: black;
 }
 
 #submit1{
-  background-color: #000000;
+  background-color: #000000;  
   font-family:'Poppins', sans-serif;
   font-size: 2rem;
   border: 2px solid #1A1A1A;
@@ -96,12 +92,12 @@ color: cornsilk;
   width: 50%;
   color: cornsilk;
   position: relative;
-  top: 42px;
-  left: px;
+  top: 43px;
+  left: -40px;
 }
 
 #submit1:hover{
-  background-color: #693737;
+  background-color: #1A1A1A;
 }
 
 #homebtn {
@@ -115,7 +111,12 @@ color: cornsilk;
   width: 50%;
   color: cornsilk;
   position: relative;
-  top: 42px;
+  top: 43px;
+  left: 40px;
+}
+
+#homebtn:hover{
+  background-color: #1A1A1A;
 }
 
 .feedbackCard{
@@ -138,7 +139,7 @@ color: cornsilk;
 
 .feedbackCard p {
   font-size: 1.5rem;
-  color: cornsilk;
+  color: black;
 }
 
 .feedbackCard button{
