@@ -15,7 +15,6 @@ function Login({ setUser }) {
       <div className="cont2">
         <div className="cont3">
           <h1 id="header">Movie Forum</h1>
-          {/* <h3 id="h3">Hi, Welcome Back!</h3> */}
           {showLogin ? (
             <>
               <LoginForm setUser={setUser} />
@@ -28,7 +27,7 @@ function Login({ setUser }) {
             </>
           ) : (
             <>
-              <SignUpForm setUser={setUser} />
+              <SignUpForm setUser={setUser} setShowLogin={setShowLogin} />
               <p className="p">
                 Already have an account? &nbsp;
                 <button id="b2" onClick={() => setShowLogin(true)}>

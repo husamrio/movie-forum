@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import "./style.css";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 function LoginForm({ setUser }) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
   function handleSubmit(e) {
     e.preventDefault();
+    setErrors([]);
     fetch("/login", {
       method: "POST",
       headers: {
@@ -19,43 +20,60 @@ function LoginForm({ setUser }) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
+        navigate("/");
       } else {
         r.json().then((err) => setErrors(err.error));
+        console.log(errors);
       }
     });
-    navigate('/')
   }
+  const mimi = errors.includes("Invalid username or password") ? (
+    <p className="error-message">Invalid username or password</p>
+  ) : (
+    <p>
+      <br />
+    </p>
+  );
 
   return (
     <form onSubmit={handleSubmit}>
-      {/* <div> */}
-        <h2 id="h2">Hi, Welcome Back!</h2>
-        <label className="label" htmlFor="username">Enter username:</label>
+      <h2 id="h2">Hi, Welcome Back!</h2>
+      <div>
+        <label className="label" htmlFor="username">
+          Enter username:
+        </label>
         <input
           type="text"
           id="username"
           autoComplete="off"
           placeholder="username"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => {
+            setErrors([]);
+            setUsername(e.target.value);
+          }}
         />
-        <label className="label" htmlFor="password">Enter password:</label>
+      </div>
+      <div>
+        <label className="label" htmlFor="password">
+          Enter password:
+        </label>
         <input
           type="password"
           id="password"
           autoComplete="current-password"
           placeholder="Enter your password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => {
+            setErrors([]);
+            setPassword(e.target.value);
+          }}
         />
-        <button id="b3"variant="fill" color="primary" type="submit">
-          Login
-        </button>
-      <div>
-        {/* {errors.map((err) => (
-          <Error key={err}>{err}</Error>
-        ))} */}
       </div>
+      {mimi}
+      <button id="b3" variant="fill" color="primary" type="submit">
+        Login
+      </button>
     </form>
   );
 }

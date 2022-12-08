@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  /* text-align: center; */
 }
 .cont{
   display: flex;
@@ -129,4 +130,11 @@ form {
 .label2{
     display: block;
     font-size: 20px
+}
+.error-message{
+  /* padding-left: 10px; */
+  /* margin: 0; */
+  margin-left: 3px;
+  color: red;
+  display: inline-block;
 }
