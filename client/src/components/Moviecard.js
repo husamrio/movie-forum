@@ -40,10 +40,7 @@ function Moviecard(props) {
 
       <div className="overview">
         <h3>Overview</h3>
-        <>
-          <p>{props.overview}</p>
-          {/* {clicked == "true" ? reviews : null} */}
-        </>
+        <p>{props.overview}</p>
         <button className="button" onClick={handleClick}>
           Reviews
         </button>
