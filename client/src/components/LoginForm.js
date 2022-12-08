@@ -27,13 +27,9 @@ function LoginForm({ setUser }) {
       }
     });
   }
-  const mimi = errors.includes("Invalid username or password") ? (
-    <p className="error-message">Invalid username or password</p>
-  ) : (
-    <p>
-      <br />
-    </p>
-  );
+    const errorMessage = errors.includes("Invalid username or password") ? (
+      <p className="error-message">Invalid username or password</p>
+    ) : undefined;
 
   return (
     <form onSubmit={handleSubmit}>
@@ -69,8 +65,8 @@ function LoginForm({ setUser }) {
             setPassword(e.target.value);
           }}
         />
+        {errorMessage}
       </div>
-      {mimi}
       <button id="b3" variant="fill" color="primary" type="submit">
         Login
       </button>
