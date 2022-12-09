@@ -16,7 +16,7 @@ function Moviecard( {props} ) {
     }
   }
 
-  let reviews = props.reviews.map((r) => (<p key={r.id}>{r.comment}</p>))
+  // let reviews = props.reviews.map((r) => (<p key={r.id}>{r.comment}</p>))
 
 
  let poster_path = props.poster_path 
@@ -34,7 +34,7 @@ function Moviecard( {props} ) {
         <h3>Overview</h3>
     <>
         <p>{props.overview}</p>
-        { clicked == "true"? reviews  : null }
+        {/* { clicked == "true"? reviews  : null } */}
     </>
         <button className="button" onClick={ handleClick }>
       Reviews

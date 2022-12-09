@@ -16,6 +16,7 @@ function Movielist() {
       .then(setMovies)
 
   }, []);
+  
 
   return (
     <div className="main">
