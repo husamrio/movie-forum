@@ -57,8 +57,7 @@ color: #000000;
 
 #rating{
   position: relative;
-  left: 260px;
-  bottom: 25px;
+  left: 190px;
   width: 50%;
 }
 
@@ -92,7 +91,7 @@ color: #000000;
   width: 50%;
   color: cornsilk;
   position: relative;
-  top: 43px;
+  top: 93px;
   left: -40px;
 }
 
@@ -111,7 +110,7 @@ color: #000000;
   width: 50%;
   color: cornsilk;
   position: relative;
-  top: 43px;
+  top: 93px;
   left: 40px;
 }
 

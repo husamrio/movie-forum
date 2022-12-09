@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import Rating from '@mui/material/Rating';
-import Stack from '@mui/material/Stack';
 
 function Review({feedbacks}){
   const[formData, setValue] =useState({
@@ -45,9 +44,7 @@ function Review({feedbacks}){
               <div className="cont-3">
                   <form onSubmit={handleSubmit}>
                       <label className='rating' htmlFor="rating">Rating:</label>                     
-                      <Stack id="rating" spacing={1}>
-                        <Rating name="half-rating" precision={0.5} onChange={handleChange} value={formData.rating}/>                      
-                      </Stack>
+                      <Rating id='rating' defaultValue={5} max={10} precision={0.1} value={formData.rating}/>    
                       <br />                      
                       <label id='comm' htmlFor="comment">Comment:</label>
                       <textarea required name="Comment" id="comment" cols="30" rows="10" placeholder='write your comments here ..' onChange={handleChange} value={formData.comment}></textarea><br /><br />           
