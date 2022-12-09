@@ -9,7 +9,7 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  /* align-content: center;  */
+  align-content: center;  
   gap: 1%;
   justify-content: space-around;
 }
@@ -54,6 +54,10 @@ nav a {
   height: 40px;
   margin-left: 200px;
   margin-top: 15px;
+}
+#login-btn:hover{
+  background-color: #693737;
+  color: #fafafa;
 }
 #signup-btn {
   font-size: large;
