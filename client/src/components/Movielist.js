@@ -10,6 +10,7 @@ function Movielist() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
+    
     fetch("/movies")
       .then((res) => res.json())
       .then(setMovies)
