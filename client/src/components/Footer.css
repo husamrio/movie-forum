@@ -46,7 +46,9 @@ li i{
     width: 100px;
     height: 39px;
 }
-
+#btn:hover{
+    background-color: #693737;
+}
 .end{
     background-color: black;
     color: #fafafa;
