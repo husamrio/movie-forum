@@ -26,8 +26,8 @@ function ReviewList({feedbacks, setFeedback}) {
     const cards=feedbacks.map(feedback=>{
        return (
        <div key={feedback.id} className="feedbackCard" >
-           <Rating value={feedback.rating} readOnly/>                      
-           <p contentEditable='true' onBlur={handleBlur} id={feedback.id}>{feedback.comment}</p>           
+           <Rating value={feedback.rating} max={10} readOnly/>                      
+           <p onBlur={handleBlur} id={feedback.id}>{feedback.comment}</p>           
            <button className='delete' onClick={handleDelete}  id={feedback.id}>Delete</button>
        </div>)
     })

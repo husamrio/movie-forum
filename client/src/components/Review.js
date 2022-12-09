@@ -26,7 +26,6 @@ function Review({feedbacks}){
           document.getElementById('feedback').append(p);
           p.style.fontFamily="'Poppins', sans-serif";
           p.style.fontSize="40px"
-          p.style.color = "cornsilk"
           p.innerText="Thank you for your review. Hope to see you back!!!."
           document.querySelector('#feedback').querySelector('h2').remove();
           form.remove();
@@ -44,7 +43,7 @@ function Review({feedbacks}){
               <div className="cont-3">
                   <form onSubmit={handleSubmit}>
                       <label className='rating' htmlFor="rating">Rating:</label>                     
-                      <Rating id='rating' defaultValue={5} max={10} precision={0.1} onChange={handleChange} value={formData.rating}/>    
+                      <Rating id='rating' defaultValue={5} max={10} precision={0.1}/>    
                       <br />                      
                       <label id='comm' htmlFor="comment">Comment:</label>
                       <textarea required name="Comment" id="comment" cols="30" rows="10" placeholder='write your comments here ..' onChange={handleChange} value={formData.comment}></textarea><br /><br />           
