@@ -44,7 +44,7 @@ function Review({feedbacks}){
               <div className="cont-3">
                   <form onSubmit={handleSubmit}>
                       <label className='rating' htmlFor="rating">Rating:</label>                     
-                      <Rating id='rating' defaultValue={5} max={10} precision={0.1} value={formData.rating}/>    
+                      <Rating id='rating' defaultValue={5} max={10} precision={0.1} onChange={handleChange} value={formData.rating}/>    
                       <br />                      
                       <label id='comm' htmlFor="comment">Comment:</label>
                       <textarea required name="Comment" id="comment" cols="30" rows="10" placeholder='write your comments here ..' onChange={handleChange} value={formData.comment}></textarea><br /><br />           
