@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import './App.css'
-// import Search from './Search';
+import Search from './Search';
 
 
 
@@ -26,7 +26,7 @@ function NavBar ({user, setUser}){
             <NavLink exact to="/">
                 MovieForum
             </NavLink>
-            {/* <Search /> */}
+            <Search />
             {!user ? <button id="login-btn" onClick={() => navigate("/login")}>Login</button> : <button id="login-btn" onClick={()=>handleLogout()}>Logout</button>}
             </nav>
         </div>
