@@ -5,7 +5,7 @@ import Search from './Search';
 
 
 
-function NavBar ({user, setUser}){
+function NavBar ({user, setUser, setMovies}){
     const navigate = useNavigate()
 
     function handleLogout() {
@@ -19,17 +19,25 @@ function NavBar ({user, setUser}){
         })
     }
 
+    function handleSearch(e) {
+      setMovies((movies) => {
+        return movies.filter((m) => {
+          return m.title.toLowerCase().includes(e.target.value.toLowerCase());
+        });
+      });
+    }
+
     return (
-    <div className="navbar">
+      <div className="navbar">
         <nav>
-            <img id="logo" src="https://i.ibb.co/XsSZ0x1/image-1-1.jpg" alt="" />
-            <NavLink exact to="/">
-                MovieForum
-            </NavLink>
-            <Search />
-            {!user ? <button id="login-btn" onClick={() => navigate("/login")}>Login</button> : <button id="login-btn" onClick={()=>handleLogout()}>Logout</button>}
-            </nav>
-        </div>
+          <img id="logo" src="https://i.ibb.co/XsSZ0x1/image-1-1.jpg" alt="" />
+          <NavLink exact to="/">
+            MovieForum
+          </NavLink>
+          <Search handleSearch={handleSearch} />
+          {!user ? <button id="login-btn" onClick={() => navigate("/login")}>Login</button> : <button id="login-btn" onClick={()=>handleLogout()}>Logout</button>}
+        </nav>
+      </div>
     );
 }
 export default NavBar;
