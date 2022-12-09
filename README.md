@@ -1,24 +1,41 @@
-# README
+# Movie Forum
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Description
+This is a simple web app that allows movie and tv show lovers around the world to come to the platform and see the latest and highest rated shows and movies. A user is able to to log into the plaform, view the latest titles and the reviews left by other users who have watched it.A user is also able to leave a review of their own and delete it.
+# Screenshots
 
-Things you may want to cover:
+![Screenshot1]()
+![screenshot2]()
 
-* Ruby version
+# Setup and installation instructions
+- Clone the repository to your computer from https://github.com/JosephNjeruNjenga/movie-forum
+- Open the project using your preferred code editor, preferably Visual studio.
+- Open the project using a web browser, preferably Google Chrome.
 
-* System dependencies
+# Known bugs
+There are no known bugs in this project.
 
-* Configuration
+# Technologies used
+1. HTML
+2. CSS
+3. Javascript
+4. React
+5. Ruby
+6. Ruby on rails.
 
-* Database creation
+# Support and Contact details
+-abdulaziz.abdullahi@student.moringaschool.com
+-joseph.njenga@student.moringaschool.com
+-ivan.nguyo@student.moringaschool.com
+-barbra.mududa@student.moringaschool.com
+-jeremiah.kungu@student.moringaschool.com
 
-* Database initialization
+# License
+This project is under [MIT](https://github.com/JosephNjeruNjenga/movie-forum/blob/main/licence) license.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Collaborators
+-Joseph Njenga
+-Abdulaziz Abdullahi
+-Barbra Mududa
+-Ivan Nguyo
+-Jeremiah Kungu
