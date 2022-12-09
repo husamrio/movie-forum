@@ -24,18 +24,18 @@ There are no known bugs in this project.
 6. Ruby on rails.
 
 # Support and Contact details
--abdulaziz.abdullahi@student.moringaschool.com
--joseph.njenga@student.moringaschool.com
--ivan.nguyo@student.moringaschool.com
--barbra.mududa@student.moringaschool.com
--jeremiah.kungu@student.moringaschool.com
+- abdulaziz.abdullahi@student.moringaschool.com
+- joseph.njenga@student.moringaschool.com
+- ivan.nguyo@student.moringaschool.com
+- barbra.mududa@student.moringaschool.com
+- jeremiah.kungu@student.moringaschool.com
 
 # License
 This project is under [MIT](https://github.com/JosephNjeruNjenga/movie-forum/blob/main/licence) license.
 
 # Collaborators
--Joseph Njenga
--Abdulaziz Abdullahi
--Barbra Mududa
--Ivan Nguyo
--Jeremiah Kungu
+- Joseph Njenga
+- Abdulaziz Abdullahi
+- Barbra Mududa
+- Ivan Nguyo
+- Jeremiah Kungu
