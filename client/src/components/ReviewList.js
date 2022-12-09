@@ -57,7 +57,7 @@ function ReviewList({feedbacks, setFeedback}) {
          .then(data=>console.log(data))
    }
    return (
-    <div className="cont2">
+    <div className="cont-2">
         <h1>Reviews</h1>
         <div className='fcontainer'>
         {cards}

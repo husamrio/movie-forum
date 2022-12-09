@@ -42,7 +42,7 @@ function Review({feedbacks}){
           <div id='feedback'>
               <h1>Please leave your review here!!</h1>
               <h2>You can fill the form below to tell us about your experience</h2>
-              <div className="cont3">
+              <div className="cont-3">
                   <form onSubmit={handleSubmit}>
                       <label className='rating' htmlFor="rating">Rating:</label>                     
                       <Stack id="rating" spacing={1}>
@@ -51,7 +51,7 @@ function Review({feedbacks}){
                       <br />                      
                       <label id='comm' htmlFor="comment">Comment:</label>
                       <textarea required name="Comment" id="comment" cols="30" rows="10" placeholder='write your comments here ..' onChange={handleChange} value={formData.comment}></textarea><br /><br />           
-                      <input type="submit" id='submit1'/>   
+                      <input type="submit" id='submit-1'/>   
                       <a href="/home">
                         <button id='homebtn'>HomePage</button>
                       </a>                  
