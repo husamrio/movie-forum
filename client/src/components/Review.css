@@ -1,0 +1,255 @@
+.cont-2 {
+  background-color: #8c514a;
+  /* position: relative; */
+  text-align: center;
+  height: 12%;
+}
+
+.cont-2 h1 {
+  /* font-size: 2.5rem; */
+  color: #000000;
+}
+
+.fcontainer {
+  display: flex;
+  overflow-x: auto;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  margin-top: 50px;
+}
+.cont-3 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+#feedback {
+  /* position: relative; */
+  /* display: flex;
+  justify-content: space-between; */
+  /* text-align: center; */
+  /* height: 600px; */
+}
+#feedback form {
+  background-color: #fff;
+  border: 1px solid black;
+  height: 350px;
+  padding: 40px;
+  border-radius: 10px;
+  /* align-items: center; */
+  /* display: flex; */
+  /* justify-content: center; */
+  width: 40%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  text-align: left;
+}
+#feedback h1 {
+  font-size: 2.8rem;
+  color: black;
+}
+
+#feedback h2 {
+  color: black;
+}
+
+#rating {
+  position: relative;
+  left: 190px;
+  width: 50%;
+}
+
+.rating {
+  color: black;
+}
+
+#comment {
+  /* position: relative; */
+  left: 150px;
+  bottom: -50px;
+  width: 60%;
+  padding: 10px;
+  color: #1a1a1a;
+}
+
+#comm {
+  /* position: relative; */
+  bottom: 100px;
+  color: black;
+}
+
+#submit-1 {
+  background-color: #000000;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  border: 2px solid #1a1a1a;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 50%;
+  color: cornsilk;
+  position: relative;
+  /* top: 93px; */
+  /* left: -40px; */
+}
+
+#submit1:hover {
+  background-color: #1a1a1a;
+}
+
+#homebtn {
+  background-color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  border: 2px solid #1a1a1a;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 50%;
+  color: cornsilk;
+  position: relative;
+  top: 93px;
+  left: 40px;
+}
+
+#homebtn:hover {
+  background-color: #1a1a1a;
+}
+
+.reviewCard {
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  border-radius: 15px;
+  min-height: 200px;
+  display: grid;
+  box-shadow: 10px 2px 10px 2px;
+}
+
+.reviewCard:hover {
+  box-shadow: 10px 10px 5px;
+}
+
+.reviewCard h1 {
+  font-size: 2rem;
+  color: cornsilk;
+}
+
+.reviewCard p {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.reviewCard button {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1a1a1a;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  min-height: 50px;
+  min-width: 0;
+  outline: none;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+}
+.review-movie {
+  /* width: 98%; */
+  display: flex;
+  justify-content: center;
+  /* height: 100vh; */
+}
+.review-movie-card {
+  margin: 100px;
+  /* position: relative; */
+  width: 1000px;
+  height: 500px;
+  /* background: transparent; */
+  /* position: absolute; */
+  /* left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  border-radius: 10px; */
+  /* -webkit-border-radius:10px; */
+  /* -moz-border-radius: 10px; */
+}
+.review-movie-card-left {
+  width: 40%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+.review-movie-card-left img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 0 0 10px;
+  /* position: absolute; */
+}
+.review-movie-card-right {
+  background-color: white;
+  width: 60%;
+  height: 100%;
+  float: left;
+  /* background: #e2e2e2; */
+  /* background: #000000; */
+  border-radius: 0 10px 10px 0;
+}
+.review-movie-card-right h1 {
+  color: black  ;
+  font-weight: 800;
+  text-align: center;
+  font-size: 2vw;
+  position: relative;
+  /* margin: 30px 0 0 0; */
+  /* padding: 0 0 30px 0; */
+  letter-spacing: 1px;
+}
+.review-movie-rating {
+  /* position: relative; */
+  /* background-color: white; */
+}
+.review-movie-card-right p {
+  /* font-family: 'Montserrat', sans-serif; */
+  display: flex;
+  padding: 0.5rem;
+  font-size: 24px;
+  max-height: 10%;
+  overflow-y: auto;
+}
+.back-homepage {
+  text-decoration: none;
+  position: absolute;
+  /* top: 0; */
+  color: white;
+  /* float: left; */
+  display: flex;
+  justify-content: left;
+  /* padding-left: 1%; */
+}
+.review-header {
+  position: sticky;
+  top: 0;
+  background-color: black;
+}
+.review-header button {
+  padding: 0;
+  border: none;
+  cursor: grab;
+  /* border-radius: 12px; */
+  height: 50px;
+  width: 50px;
+  font-size: 40px;
+  background-color: black;
+  color: white;
+  /* margin: 0;
+  padding: 0; */
+}
