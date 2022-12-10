@@ -5,7 +5,7 @@ import Search from './Search';
 
 
 
-function NavBar ({user, setUser}){
+function NavBar ({user, setUser, setMovies}){
     const navigate = useNavigate()
 
     function handleLogout() {
@@ -19,6 +19,15 @@ function NavBar ({user, setUser}){
         })
     }
 
+    function handleSearch(e) {
+      e.preventDefault()
+      setMovies((movies) => {
+        return movies.filter((m) => {
+          return m.title.toLowerCase().includes(e.target.value.toLowerCase());
+        });
+      });
+    }
+
     return (
       <div className="navbar">
         <nav>
@@ -26,7 +35,7 @@ function NavBar ({user, setUser}){
           <NavLink exact to="/">
             MovieForum
           </NavLink>
-          <Search />
+          <Search handleSearch={handleSearch} />
           {!user ? <button id="login-btn" onClick={() => navigate("/login")}>Login</button> : <button id="login-btn" onClick={()=>handleLogout()}>Logout</button>}
         </nav>
       </div>

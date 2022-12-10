@@ -1,16 +1,11 @@
 import React from "react";
 
-function Search({searchInput}) {
-
-    return (
-        <div className="searchbar">
-            <input 
-                onChange={searchInput} 
-                type="text"
-                placeholder="Search for a show, movie..."
-            />
-        </div>
-    );
+function Search({ handleSearch }) {
+  return (
+    <div className="searchbar">
+      <input type="text" placeholder="Search tv show, movies, animations..." onChange={handleSearch} />
+    </div>
+  );
 }
 
 export default Search;

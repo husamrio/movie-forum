@@ -5,7 +5,7 @@ function Back() {
   return (
     <div className="review-header">
       <NavLink className="back-homepage" exact to="/">
-        {"<Back"}
+        <button>{"<"}</button>
       </NavLink>
     </div>
   );
