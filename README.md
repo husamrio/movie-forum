@@ -1,21 +1,21 @@
 # Movie Forum
 
 # Table of contents
-1. [Description](#Description)
-2. [Screenshots](#Screenshots)
-3. [Setup and installation instructions](#Setup-and-installation-instructions)
-  - [Setting up the frontend](#setting-up-the-frontend)
-  - [Setting up the Backend](#setting-up-the-Backend)
-  - [Live Links](#Live-Links)
-4. [Known bugs](#Known-bugs)
+1. [Description](#description)
+2. [Screenshots](#screenshots)
+3. [Setup and installation instructions](#setup-and-installation-instructions)
+  - [Setting up the Backend](#setting-up-the-backend)
+  - [Setting up the Frontend](#setting-up-the-frontend)
+  - [Live Links](#live-links)
+4. [Known bugs](#known-bugs)
 5. [Technologies used](#technologies-used)
-6. [Support and Contact details](#Support-and-Contact-details)
-7. [License](#License)
-8. [Collaborators](#Collaborators)
+6. [Support and Contact details](#support-and-contact-details)
+7. [License](#license)
+8. [Collaborators](#collaborators)
 
 
 # Description
-This is a simple web app that allows movie and tv show lovers around the world to come to our platform and checkout the latest and highest rated shows and movies. A user is able to to log into the plaform, view the latest titles and the reviews/comments left by other users on the platform who have watched it before.A user is also able to post a review, update and delete it.
+This is a simple web app that allows movie lovers around the world to come to our platform and checkout the latest and highest rated films. A user is able to to log into the plaform, view the latest titles and reviews/comments left by other users who have watched them before. A user is also able to post a review, update and delete it.
 
 # Screenshots
 ![Screenshot1](https://github.com/JosephNjeruNjenga/movie-forum/blob/ft-login-signup/client/src/screenshot1.png)
@@ -23,24 +23,10 @@ This is a simple web app that allows movie and tv show lovers around the world t
 
 # Setup and installation instructions
   ## Requirements
-- Ruby 2.7.4
+- Ruby 2.7.6
 - Bundle 
 - Rails
 - NodeJS (v16), and npm
-
-### Setting up the frontend
-- When you're ready to start building your project, run:
-
-```
-npm install --prefix client
-npm install @mui/material @emotion/react @emotion/styled --prefix client
-npm start --prefix client
-```
-- `rails s`: run the backend on [http://localhost:3000](http://localhost:3000)
-- `npm start --prefix client`: run the frontend on
-  [http://localhost:4000](http://localhost:4000)
-
-- Open the project using your preferred code editor, preferably Visual studio to inspect the code.
 
 ### Setting up the backend
 - Start by cloning the repository to your computer from https://github.com/JosephNjeruNjenga/movie-forum
@@ -50,10 +36,10 @@ npm start --prefix client
 $ ruby -v
 ```
 
-We recommend version 2.7.4. If you need to upgrade you can install it using rvm:
+We recommend version 2.7.6. If you need to upgrade you can install it using rvm:
 
 ```console
-$ rvm install 2.7.4 --default
+$ rvm install 2.7.6 --default
 ```
 
 You should also install the latest versions of `bundler` and `rails`:
@@ -89,6 +75,20 @@ npm i -g npm
  ```
  rails server
  ```
+ ### Setting up the frontend
+- When you're ready to start building your project, run:
+
+```
+npm install --prefix client
+npm install @mui/material @emotion/react @emotion/styled --prefix client
+npm start --prefix client
+```
+- `rails s`: run the backend on [http://localhost:3000](http://localhost:3000)
+- `npm start --prefix client`: run the frontend on
+  [http://localhost:4000](http://localhost:4000)
+
+- Open the project using your preferred code editor, preferably Visual studio to inspect the code.
+
 ### Live Links
 - Frontend-
 - Backend-
