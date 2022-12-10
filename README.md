@@ -4,7 +4,7 @@
 1. [Description](#Description)
 2. [Screenshots](#Screenshots)
 3. [Setup and installation instructions](#Setup-and-installation-instructions)
-  - [Setting up the frontend](#setting-up-the-rontend)
+  - [Setting up the frontend](#setting-up-the-frontend)
   - [Setting up the Backend](#setting-up-the-Backend)
   - [Live Links](#Live-Links)
 4. [Known bugs](#Known-bugs)
