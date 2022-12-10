@@ -5,12 +5,12 @@ import Review from "./Review";
 import { useLocation } from "react-router-dom";
 import Back from "./Back";
 
-function ReviewList({ user }) {
+function ReviewList() {
   const location = useLocation();
   const [reviews, setReviews] = useState([]);
 
-  console.log(location.state.props);
-  console.log(reviews);
+  // console.log(location.state.props);
+  // console.log(reviews);
 
   useEffect(() => {
     fetch(`/movies/${location.state.props.id}`)
@@ -19,56 +19,30 @@ function ReviewList({ user }) {
   }, []);
   // console.log("This the fetch data", reviews);
 
-  function handleBlur(e) {
-    console.log(e.target.innerText);
-
-    fetch("/reviews", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({ comment: e.target.innerText }),
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }
-
   const cards = reviews.map((review) => {
     return (
       <div key={review.id} className="reviewCard">
         <Rating value={review.rating} max={10} readOnly />
-        <p onBlur={handleBlur} id={review.id}>
-          {review.comment}
-        </p>
+        <p id={review.id}>{review.comment}</p>
         <h3>{review.user.username}</h3>
-        <button className="delete" id={review.id}>
+        <button className="delete" onClick={handleDelete} id={review.id}>
           Delete
         </button>
       </div>
     );
   });
 
-  // function handleDelete(e) {
-  //   const newreviews = reviews.filter((item) => {
-  //     // console.log(e.target)
-  //     // console.log(item.id)
-  //     return item.id !== parseInt(e.target.id);
-  //   });
-
-  //   setreview(newreviews);
-  //   console.log("This is newreview:", newreviews);
-
-  //   fetch("/reviews", {
-  //     method: "DELETE",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Accept: "application/json",
-  //     },
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // }
+  function handleDelete(e) {
+    const id = e.target.id;
+    fetch("/reviews/"+id, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }
   return (
     <div className="cont-2">
       <Back />

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Rating from "@mui/material/Rating";
-import { Link } from "react-router-dom";
 
 function Review({location}) {
   // console.log(location.state.props);
@@ -18,16 +17,16 @@ function Review({location}) {
     console.log(formData);
     console.log(location.state)
     e.preventDefault();
-    // fetch("/reviews", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Accept: "application/json",
-    //   },
-    //   body: JSON.stringify(formData),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => console.log(data));
+    fetch("/reviews", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
     // let form = document.querySelector("form");
     // let p = document.createElement("p");
     // document.getElementById("feedback").append(p);
@@ -75,11 +74,7 @@ function Review({location}) {
             value={comment}
           ></input>
           <br />
-          <br />
           <input type="submit" id="submit-1" />
-          <Link to="/">
-            <button id="homebtn">HomePage</button>
-          </Link>
         </form>
       </div>
     </div>

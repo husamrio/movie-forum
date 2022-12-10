@@ -7,10 +7,9 @@ class ReviewsController < ApplicationController
     end
 
     def create
-        byebug
         return render json: {errors: ["Not authorized"]}, status: :unauthorized unless session.include? :user_id
-        user = User.find(session[:used_id])
-        review = review.create!(rating: reviews_params[:rating], comment: reviews_params[:comment], movie_id: reviews_params[:movie_id], user_id: user.id)
+        user = User.find(session[:user_id])
+        review = Review.create!(rating: reviews_params[:rating], comment: reviews_params[:comment], movie_id: reviews_params[:movie_id], user_id: user.id)
         render json: review, status: :created
     end
 
@@ -23,10 +22,10 @@ class ReviewsController < ApplicationController
         end
     end
 
-    def destroy 
+    def destroy
         review = Review.find(params[:id])
-        review.destroy 
-        render json: review, status: :no_content 
+        review.destroy
+        head :no_content
     end
 
     def update 
