@@ -96,11 +96,11 @@ movies = [
 
 movies.map {|movie| Movie.create(movie)}
 
-Review.create(user_id:1,movie_id:3, comment:"okay movie",star_rating: 5)
-Review.create(user_id:2,movie_id:6, comment:"awesome💃🏿",star_rating:7.7 )
-Review.create(user_id:3,movie_id:9, comment:"okay-ish",star_rating: 5.6)
-Review.create(user_id:4,movie_id:5, comment:"Best movie ever❤️‍🔥",star_rating: 8)
-Review.create(user_id:5,movie_id:2, comment:"quite dissapointing😭",star_rating: 4.6)
+Review.create(user_id:1,movie_id:3, comment:"okay movie",rating: 5)
+Review.create(user_id:2,movie_id:6, comment:"awesome💃🏿",rating:7.7 )
+Review.create(user_id:3,movie_id:9, comment:"okay-ish",rating: 5.6)
+Review.create(user_id:4,movie_id:5, comment:"Best movie ever❤️‍🔥",rating: 8)
+Review.create(user_id:5,movie_id:2, comment:"quite dissapointing😭",rating: 4.6)
 
 
 puts "data seeded"

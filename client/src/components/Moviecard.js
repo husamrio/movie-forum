@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Moviecard(props) {
-  const [clicked, setClicked] = useState("false");
+  // const [clicked, setClicked] = useState("false");
+  const navigate = useNavigate()
 
   const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 
@@ -17,14 +20,16 @@ function Moviecard(props) {
   };
 
   function handleClick(e) {
-    if (clicked === "false") {
-      setClicked("true");
-    } else {
-      setClicked("false");
-    }
+    // if (clicked === "false") {
+    //   setClicked("true");
+    // } else {
+    //   setClicked("false");
+    // }
+    navigate("/review", {
+      state: {props},
+    });
   }
   // let reviews = props.reviews.map((r) => (<p key={r.id}>{r.comment}</p>))
-
 
   let poster_path = props.poster_path;
 
@@ -48,4 +53,4 @@ function Moviecard(props) {
     </div>
   );
 }
-export default Moviecard
+export default Moviecard;

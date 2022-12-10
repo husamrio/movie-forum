@@ -1,5 +1,5 @@
 class ReviewSerializer < ActiveModel::Serializer
-  attributes :id, :user_id, :movie_id, :comment, :star_rating
+  attributes :id, :user_id, :movie_id, :comment, :rating
   
   belongs_to :movie
   belongs_to :user

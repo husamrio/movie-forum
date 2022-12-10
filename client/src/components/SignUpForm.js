@@ -7,9 +7,6 @@ function SignUpForm({ setShowLogin }) {
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [errors, setErrors] = useState([]);
-
-
-  console.log(errors)
   
   function handleSubmit(e) {
     e.preventDefault();

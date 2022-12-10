@@ -23,7 +23,6 @@ function LoginForm({ setUser }) {
         navigate("/");
       } else {
         r.json().then((err) => setErrors(err.error));
-        console.log(errors);
       }
     });
   }

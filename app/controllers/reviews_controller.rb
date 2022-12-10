@@ -7,12 +7,11 @@ class ReviewsController < ApplicationController
     end
 
     def create
-        review = Review.new(reviews_params)
-        if review.save
-            render json: review, status: :created
-        else
-            render json: {error: review.errors.full_messages}, status: :unprocessable_entity
-        end
+        byebug
+        return render json: {errors: ["Not authorized"]}, status: :unauthorized unless session.include? :user_id
+        user = User.find(session[:used_id])
+        review = review.create!(rating: reviews_params[:rating], comment: reviews_params[:comment], movie_id: reviews_params[:movie_id], user_id: user.id)
+        render json: review, status: :created
     end
 
     def show 
@@ -38,7 +37,7 @@ class ReviewsController < ApplicationController
 
     private 
     def reviews_params
-        params.permit(:user_id, :movie_id, :comment, :star_rating)
+        params.permit(:movie_id, :comment, :rating)
     end
 
     def record_not_found_method
