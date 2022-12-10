@@ -90,8 +90,8 @@ npm start --prefix client
 - Open the project using your preferred code editor, preferably Visual studio to inspect the code.
 
 ### Live Links
-- Frontend-
-- Backend-
+- Frontend- [http://localhost:4000](http://localhost:4000)
+- Backend- [http://localhost:3000](http://localhost:3000)
 
 # Known bugs
 There are no known bugs in this project.
