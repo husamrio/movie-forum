@@ -7,7 +7,7 @@
   - [Setting up the frontend](###Setting_up_the_rontend)
   - [Setting up the Backend](###Setting_up_the_Backend)
   - [Live Links](###Live_Links)
-4. [Known bugs](#Known_bugs)
+4. [Known bugs](#Known-bugs)
 5. [Technologies used](#Technologies_used])
 6. [Support and Contact details](#Support_and_Contact_details)
 7. [License](#License)
