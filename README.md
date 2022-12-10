@@ -15,7 +15,7 @@
 
 
 # Description
-This is a simple web app that allows movie and tv show lovers around the world to come to the platform and see the latest and highest rated shows and movies. A user is able to to log into the plaform, view the latest titles and the reviews/comments left by other users who have watched it.A user is also able to post a review, update and delete it.
+This is a simple web app that allows movie and tv show lovers around the world to come to our platform and checkout the latest and highest rated shows and movies. A user is able to to log into the plaform, view the latest titles and the reviews/comments left by other users on the platform who have watched it before.A user is also able to post a review, update and delete it.
 
 # Screenshots
 ![Screenshot1](https://github.com/JosephNjeruNjenga/movie-forum/blob/ft-login-signup/client/src/screenshot1.png)
