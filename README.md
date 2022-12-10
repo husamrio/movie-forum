@@ -3,7 +3,7 @@
 # Table of contents
 1. [Description](#Description)
 2. [Screenshots](#Screenshots)
-3. [Setup and installation instructions](#Setup and installation instructions)
+3. [Setup](#Setup)
   - [Setting up the frontend](###Setting up the frontend)
   - [Setting up the Backend](###Setting up the Backend)
   - [Live Links](###Live Links)
