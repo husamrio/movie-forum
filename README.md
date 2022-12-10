@@ -8,7 +8,7 @@
   - [Setting up the Backend](#setting-up-the-Backend)
   - [Live Links](#Live-Links)
 4. [Known bugs](#Known-bugs)
-5. [Technologies used](#Technologies-used])
+5. [Technologies used](#technologies-used)
 6. [Support and Contact details](#Support-and-Contact-details)
 7. [License](#License)
 8. [Collaborators](#Collaborators)
