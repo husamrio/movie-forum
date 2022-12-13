@@ -9,3 +9,4 @@ function Search({ handleSearch }) {
 }
 
 export default Search;
+
