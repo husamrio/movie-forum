@@ -14,9 +14,9 @@ function Review({location}) {
   };
 
   function handleSubmit(e) {
+    e.preventDefault();
     console.log(formData);
     console.log(location.state)
-    e.preventDefault();
     fetch("/reviews", {
       method: "POST",
       headers: {
@@ -26,7 +26,12 @@ function Review({location}) {
       body: JSON.stringify(formData),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then(data =>{
+        console.log(data)
+      });
+
+      window.location.reload()
+
     // let form = document.querySelector("form");
     // let p = document.createElement("p");
     // document.getElementById("feedback").append(p);
@@ -71,7 +76,7 @@ function Review({location}) {
             rows="10"
             placeholder="write your comments here .."
             onChange={handleChange}
-            value={comment}
+            // value={comment}
           ></input>
           <br />
           <input type="submit" id="submit-1" />

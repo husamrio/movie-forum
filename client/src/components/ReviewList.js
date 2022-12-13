@@ -16,7 +16,7 @@ function ReviewList() {
     fetch(`/movies/${location.state.props.id}`)
       .then((res) => res.json())
       .then((data) => setReviews(data));
-  }, []);
+  }, [location.state.props.id]);
   // console.log("This the fetch data", reviews);
 
   const cards = reviews.map((review) => {
@@ -40,8 +40,9 @@ function ReviewList() {
         "Content-Type": "application/json",
       },
     })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
+    window.location.reload()
+
+    
   }
   return (
     <div className="cont-2">
