@@ -5,6 +5,7 @@
 2. [Screenshots](#screenshots)
 3. [Setup and installation instructions](#setup-and-installation-instructions)
   - [Setting up the Backend](#setting-up-the-backend)
+  - [Setting up the database](#setting-up-the-database)
   - [Setting up the Frontend](#setting-up-the-frontend)
   - [Live Links](#live-links)
 4. [Known bugs](#known-bugs)
@@ -18,8 +19,9 @@
 This is a simple web app that allows movie lovers around the world to come to our platform and checkout the latest and highest rated films. A user is able to to log into the plaform, view the latest titles and reviews/comments on the movies left by other users who have watched them before. A user is also able to post a review, update and delete it.
 
 # Screenshots
-![Screenshot1](https://github.com/JosephNjeruNjenga/movie-forum/blob/ft-login-signup/client/src/screenshot1.png)
-![screenshot2](https://github.com/JosephNjeruNjenga/movie-forum/blob/ft-login-signup/client/src/screenshot2.png)
+![Screenshot1](https://github.com/JosephNjeruNjenga/movie-forum/blob/main/client/src/screenshot1.png)
+
+![screenshot2](https://github.com/JosephNjeruNjenga/movie-forum/blob/main/client/src/screenshot2.png)
 
 # Setup and installation instructions
   ## Requirements
@@ -75,6 +77,18 @@ npm i -g npm
  ```
  rails server
  ```
+ ### Database table relationships
+ ![Database table relationships](https://github.com/JosephNjeruNjenga/movie-forum/blob/main/client/src/screenshot3.png)
+ 
+ ### Setting up the database
+ - Run the following commands to get started with the database:
+ 
+ ```
+ bundle i
+ rails db:migrate
+ rails db:seed
+ ```
+ 
  ### Setting up the frontend
 - When you're ready to start building your project, run:
 
