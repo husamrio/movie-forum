@@ -17,7 +17,7 @@
 
 # Description
 This is a simple web app that allows movie lovers around the world to come to our platform and checkout the latest and highest rated films. A user is able to to log into the plaform, view the latest titles and reviews/comments on the movies left by other users who have watched them before. A user is also able to post a review, update and delete it.
-
+This is a line that was edited in git and we intend to push it to github.
 # Screenshots
 ![Screenshot1](https://github.com/JosephNjeruNjenga/movie-forum/blob/main/client/src/screenshot1.png)
 
